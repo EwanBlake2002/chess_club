@@ -729,7 +729,7 @@ footer {
 /* Hero Section */
 .hero-about {
     background: linear-gradient(rgba(250, 0, 53, 0.6), rgba(250, 0, 53, 0.6)),
-        url('/images/about-banner.jpg') center/cover no-repeat;
+        url('/chess_club/images/about-banner.jpg') center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 100px 20px;
@@ -756,7 +756,7 @@ footer {
 
 .timeline-section::before {
     content: '';
-    background: url('/images/chess-watermark.png') no-repeat center center;
+    background: url('/chess_club/images/chess-watermark.png') no-repeat center center;
     background-size: 300px;
     opacity: 0.05;
     position: absolute;
