@@ -668,7 +668,7 @@ a:hover {
 .email-link {
     display: inline-block;
     margin-top: 10px;
-    color: var(--primary);
+    color: #8F001F;
     font-weight: bold;
     text-decoration: none;
     font-size: 1.1rem;
@@ -732,7 +732,7 @@ footer {
 /* Hero Section */
 .hero-about {
     background: linear-gradient(rgba(250, 0, 53, 0.6), rgba(250, 0, 53, 0.6)),
-        url('/chess_club/images/about-banner.jpg') center/cover no-repeat;
+        url('/images/about-banner.jpg') center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 100px 20px;
@@ -759,7 +759,7 @@ footer {
 
 .timeline-section::before {
     content: '';
-    background: url('/chess_club/images/chess-watermark.png') no-repeat center center;
+    background: url('/images/chess-watermark.png') no-repeat center center;
     background-size: 300px;
     opacity: 0.05;
     position: absolute;
@@ -775,7 +775,7 @@ footer {
     text-align: center;
     margin-bottom: 40px;
     font-size: 2rem;
-    color: #8F001F;
+    color: var(--primary);
     position: relative;
     z-index: 1;
 }
@@ -852,6 +852,10 @@ footer {
     box-shadow: var(--shadow);
     position: relative;
     z-index: 2;
+}
+
+.timeline-content h3{
+    color: #8F001F;
 }
 
 .timeline-item.left .timeline-content {
