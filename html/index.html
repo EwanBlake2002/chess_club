@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Napier Chess Club - Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/chess_club/css/stylesheet.css">
-    <link rel="icon" type="image/x-icon" href="/chess_club/images/chess-logo.png">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <link rel="icon" type="image/x-icon" href="/images/chess-logo.png">
     <script src="https://kit.fontawesome.com/b89a958fe1.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link
@@ -21,11 +21,11 @@
 
     <header>
         <div class="logo">
-            <img src="/chess_club/images/chess-logo.png" alt="Chess Club Logo">
+            <img src="/images/chess-logo.png" alt="Chess Club Logo" role="img">
         </div>
 
         <!-- Navigation -->
-        <nav id="nav">
+        <nav id="nav" role="navigation" aria-label="Main Navigation">
             <ul class="nav-links">
                 <li><a href="#hero"><span>Home</span></a></li>
                 <li><a href="#about"><span>About</span></a></li>
@@ -46,7 +46,7 @@
             <p class="subtitle">Where strategy meets community in the heart of the city. Join players of all levels for
                 tournaments, workshops, and casual games.</p>
             <div class="hero-chessboard"></div>
-            <a href="#join" class="cta-button">Join Now</a>
+            <a href="#join" class="cta-button" role="button" aria-label="Join Napier Chess Club">Join Now</a>
         </section>
 
         <section id="about">
@@ -77,7 +77,7 @@
             </div>
 
             <div class="about-button">
-                <a class="cta-button" href="/chess_club/html/about-us.html" class="about-btn">Learn More About Us</a>
+                <a class="cta-button" role="button" aria-label="About Napier Chess Club" href="/html/about-us.html" class="about-btn">Learn More About Us</a>
             </div>
         </section>
 
@@ -159,7 +159,7 @@
 
             <div class="join-contact">
                 <p>If you've signed up and want to attend the next meeting, email us at:</p>
-                <a href="mailto:membership@napierchessclub.edu" class="email-link">
+                <a href="mailto:membership@napierchessclub.edu" class="email-link" aria-label="Email us to join the club">
                     <i class="fas fa-envelope"></i> membership@napierchessclub.edu
                 </a>
             </div>
@@ -170,16 +170,16 @@
             <h2 class="section-title-contact"><i class="fas fa-envelope chess-icon"></i> Contact & Follow Us</h2>
             <p class="contact-intro">Stay connected for updates on meetings, tournaments, and chess content:</p>
 
-            <div class="social-links">
-                <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon" aria-label="Discord"><i class="fab fa-discord"></i></a>
+            <div class="social-links"  aria-label="Social media links">
+                <a href="#" class="social-icon" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon" aria-label="Join our Discord server"><i class="fab fa-discord"></i></a>
             </div>
 
             <div class="contact-email">
                 <p>For specific inquiries, email us at:</p>
-                <a href="mailto:info@napierchessclub.edu" class="email-link">
+                <a href="mailto:info@napierchessclub.edu" class="email-link" aria-label="Contact us for inquiries">
                     <i class="fas fa-paper-plane"></i> info@napierchessclub.edu
                 </a>
             </div>
@@ -190,7 +190,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-brand">
-                <img src="/chess_club/images/ensa-logo.jpg" alt="ENSA Logo" class="ensa-logo" />
+                <img src="/images/ensa-logo.jpg" alt="Edinburgh Napier Students' Association Logo" role="img" class="ensa-logo" />
                 <p>&copy; 2023 Napier Chess Club<br>Part of Napier University Student Activities</p>
             </div>
 
@@ -207,10 +207,10 @@
 
 
     <!-- Back to Top Button -->
-    <div id="scroll" class="back-to-top">
+    <div id="scroll" class="back-to-top" role="button" tabindex="0" aria-label="Back to top of page">
         <div class="triangle"></div>
     </div>
-    <script src="/chess_club/js/scripts.js"></script>
+    <script src="/js/scripts.js"></script>
 </body>
 
 </html>
