@@ -46,3 +46,12 @@ const overlay = document.querySelector('.nav-overlay');
 overlay.addEventListener('click', () => {
     navToggle.checked = false;
 });
+
+document.getElementById('scroll').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+});
