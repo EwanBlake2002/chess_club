@@ -283,7 +283,7 @@ h2 {
     text-align: center;
     position: relative;
     transition: all .35s;
-    background-color: #FA0035;
+    background-color: #8F001F;
     overflow: hidden;
     /* Ensures the pseudo-element stays within the button */
     z-index: 1;
@@ -604,7 +604,7 @@ a:hover {
     display: inline-block;
     margin-top: 10px;
     font-weight: bold;
-    color: var(--primary);
+    color: #8F001F;
     text-decoration: none;
     font-size: 1.1rem;
 }
@@ -716,7 +716,7 @@ footer {
 }
 
 .footer-links a {
-    color: var(--primary);
+    color: #8F001F;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -732,7 +732,7 @@ footer {
 /* Hero Section */
 .hero-about {
     background: linear-gradient(rgba(250, 0, 53, 0.6), rgba(250, 0, 53, 0.6)),
-        url('/chess_club/images/about-banner.jpg') center/cover no-repeat;
+        url('/images/about-banner.jpg') center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 100px 20px;
@@ -759,7 +759,7 @@ footer {
 
 .timeline-section::before {
     content: '';
-    background: url('/chess_club/images/chess-watermark.png') no-repeat center center;
+    background: url('/images/chess-watermark.png') no-repeat center center;
     background-size: 300px;
     opacity: 0.05;
     position: absolute;
@@ -775,7 +775,7 @@ footer {
     text-align: center;
     margin-bottom: 40px;
     font-size: 2rem;
-    color: var(--primary);
+    color: #8F001F;
     position: relative;
     z-index: 1;
 }
@@ -924,7 +924,7 @@ footer {
 }
 
 .team-member h3 {
-    color: var(--primary);
+    color: #8F001F;
     font-size: 1.1rem;
     margin: 5px 0;
 }
@@ -977,7 +977,7 @@ footer {
     text-align: center;
     position: relative;
     transition: all 0.35s ease;
-    background-color: #FA0035;
+    background-color: #8F001F;
     overflow: hidden;
     z-index: 1;
 }
