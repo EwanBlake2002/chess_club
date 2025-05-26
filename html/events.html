@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Napier Chess Club - Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <link rel="icon" type="image/x-icon" href="/images/chess-logo.png">
+    <script src="https://kit.fontawesome.com/b89a958fe1.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Impact&family=Lora:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="/images/chess-logo.png" alt="Chess Club Logo" role="img">
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <nav id="nav" role="navigation" aria-label="Main Navigation">
+            <ul class="nav-links">
+                <li><a href="/html/index.html"><span>Home</span></a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-overlay"></div>
+    </header>
+
+    <section id="events" class="events-calendar" aria-labelledby="events-heading">
+        <h1 id="events-heading" class="section-title-events">
+            <i class="fas fa-calendar-alt chess-icon" aria-hidden="true"></i> May Events Calendar
+        </h1>
+        <p class="events-intro">Explore our events calendar for upcoming chess tournaments, socials, and special
+            sessions. Stay up-to-date and never miss a move.</p>
+
+        <div class="calendar" role="grid" aria-label="May 2025 Calendar">
+            <!-- Weekday Labels -->
+            <div class="calendar-row calendar-header" role="row">
+                <div role="columnheader">Sun</div>
+                <div role="columnheader">Mon</div>
+                <div role="columnheader">Tue</div>
+                <div role="columnheader">Wed</div>
+                <div role="columnheader">Thu</div>
+                <div role="columnheader">Fri</div>
+                <div role="columnheader">Sat</div>
+            </div>
+
+            <!-- May 2025 starts on Thursday -->
+            <div class="calendar-row" role="row">
+                <div role="gridcell"></div>
+                <div role="gridcell"></div>
+                <div role="gridcell"></div>
+                <div role="gridcell"></div>
+                <div role="gridcell">1</div>
+                <div class="event" role="gridcell" tabindex="0" data-title="Weekly Blitz" data-time="6:00 PM"
+                    data-location="Room 3B" aria-label="Event on May 2: Weekly Blitz at 6:00 PM in Room 3B">2</div>
+                <div role="gridcell">3</div>
+            </div>
+            <div class="calendar-row" role="row">
+                <div role="gridcell">4</div>
+                <div role="gridcell">5</div>
+                <div role="gridcell">6</div>
+                <div role="gridcell">7</div>
+                <div role="gridcell">8</div>
+                <div class="event" role="gridcell" tabindex="0" data-title="Strategy Workshop" data-time="6:30 PM"
+                    data-location="Main Hall" aria-label="Event on May 9: Strategy Workshop at 6:30 PM in Main Hall">9
+                </div>
+                <div role="gridcell">10</div>
+            </div>
+            <div class="calendar-row" role="row">
+                <div role="gridcell">11</div>
+                <div role="gridcell">12</div>
+                <div role="gridcell">13</div>
+                <div role="gridcell">14</div>
+                <div class="event" role="gridcell" tabindex="0" data-title="Casual Games Night" data-time="7:00 PM"
+                    data-location="Room 2A" aria-label="Event on May 15: Casual Games Night at 7:00 PM in Room 2A">15
+                </div>
+                <div role="gridcell">16</div>
+                <div role="gridcell">17</div>
+            </div>
+            <div class="calendar-row" role="row">
+                <div role="gridcell">18</div>
+                <div role="gridcell">19</div>
+                <div role="gridcell">20</div>
+                <div role="gridcell">21</div>
+                <div role="gridcell">22</div>
+                <div class="event" role="gridcell" tabindex="0" data-title="Club Tournament" data-time="5:00 PM"
+                    data-location="Main Hall" aria-label="Event on May 23: Club Tournament at 5:00 PM in Main Hall">23
+                </div>
+                <div role="gridcell">24</div>
+            </div>
+            <div class="calendar-row" role="row">
+                <div role="gridcell">25</div>
+                <div role="gridcell">26</div>
+                <div role="gridcell">27</div>
+                <div role="gridcell">28</div>
+                <div role="gridcell">29</div>
+                <div role="gridcell">30</div>
+                <div role="gridcell">31</div>
+            </div>
+        </div>
+
+        <div class="mobile-events">
+            <div class="mobile-event" tabindex="0" data-title="Weekly Blitz" data-time="6:00 PM"
+                data-location="Room 3B">
+                <span class="event-date">May 2</span>
+                <h3>Weekly Blitz</h3>
+                <p><i class="far fa-clock"></i> 6:00 PM</p>
+                <p><i class="fas fa-map-marker-alt"></i> Room 3B</p>
+            </div>
+
+            <div class="mobile-event" tabindex="0" data-title="Strategy Workshop" data-time="6:30 PM"
+                data-location="Main Hall">
+                <span class="event-date">May 9</span>
+                <h3>Strategy Workshop</h3>
+                <p><i class="far fa-clock"></i> 6:30 PM</p>
+                <p><i class="fas fa-map-marker-alt"></i> Main Hall</p>
+            </div>
+
+            <div class="mobile-event" tabindex="0" data-title="Casual Games Night" data-time="7:00 PM"
+                data-location="Room 2A">
+                <span class="event-date">May 15</span>
+                <h3>Casual Games Night</h3>
+                <p><i class="far fa-clock"></i> 7:00 PM</p>
+                <p><i class="fas fa-map-marker-alt"></i> Room 2A</p>
+            </div>
+
+            <div class="mobile-event" tabindex="0" data-title="Club Tournament" data-time="5:00 PM"
+                data-location="Main Hall">
+                <span class="event-date">May 23</span>
+                <h3>Club Tournament</h3>
+                <p><i class="far fa-clock"></i> 5:00 PM</p>
+                <p><i class="fas fa-map-marker-alt"></i> Main Hall</p>
+            </div>
+        </div>
+
+        <!-- Popup Modal -->
+        <div id="event-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+            aria-hidden="true">
+            <div class="modal-content">
+                <button class="close-button" role="button" aria-label="Close event popup">&times;</button>
+                <h2 id="modal-title"></h2>
+                <p id="modal-time"></p>
+                <p id="modal-location"></p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="/images/ensa-logo.jpg" alt="Edinburgh Napier Students' Association Logo" role="img"
+                    class="ensa-logo" />
+                <p>&copy; 2023 Napier Chess Club<br>Part of Napier University Student Activities</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="https://www.napierstudents.com/sports_socs/policybank/" target="_blank"
+                    rel="noopener noreferrer">
+                    View ENSA Policy Bank
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Back to Top Button -->
+    <div id="scroll" class="back-to-top" role="button" tabindex="0" aria-label="Back to top of page">
+        <div class="triangle"></div>
+    </div>
+    <script src="/js/scripts.js"></script>
+</body>
+
+</html>
