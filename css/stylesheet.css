@@ -732,7 +732,7 @@ footer {
 /* Hero Section */
 .hero-about {
     background: linear-gradient(rgba(250, 0, 53, 0.6), rgba(250, 0, 53, 0.6)),
-        url('/chess_club/images/about-banner.jpg') center/cover no-repeat;
+        url('/images/about-banner.jpg') center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 100px 20px;
@@ -1107,6 +1107,10 @@ footer {
     transition: transform 0.3s ease;
 }
 
+.event-card h3{
+    color: #8F001F;
+}
+
 .event-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
@@ -1196,8 +1200,8 @@ footer {
 /* Event Cells */
 .calendar .event {
     background-color: #fff4f6;
-    border: 2px solid var(--primary);
-    color: var(--primary);
+    border: 2px solid #8F001F;
+    color: #8F001F;
     position: relative;
     transition: background-color 0.2s ease;
 }
