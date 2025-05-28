@@ -732,7 +732,7 @@ footer {
 /* Hero Section */
 .hero-about {
     background: linear-gradient(rgba(250, 0, 53, 0.6), rgba(250, 0, 53, 0.6)),
-        url('/chess_club/images/about-banner.jpg') center/cover no-repeat;
+        url('/images/about-banner.jpg') center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 100px 20px;
@@ -1107,7 +1107,7 @@ footer {
     transition: transform 0.3s ease;
 }
 
-.event-card h3{
+.event-card h3 {
     color: #8F001F;
 }
 
@@ -1327,7 +1327,123 @@ footer {
     transition: all 0.3s ease;
 }
 
+.gallery-section {
+    padding: 4rem 1.5rem;
+    background: var(--background);
+    text-align: center;
+}
 
+.gallery-section h2 {
+    font-family: 'Impact', sans-serif;
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.gallery-description {
+    font-family: 'Open Sans', sans-serif;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: #444;
+    font-size: 1.1rem;
+}
+
+/* Responsive Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Image Card Container */
+.gallery-item {
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+}
+
+/* Responsive Image Box */
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Text Below Image */
+.gallery-item figcaption {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    font-style: italic;
+    color: #333;
+    padding: 0.75rem 1rem;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Gallery Modal */
+.gallery-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.gallery-modal.active {
+    display: flex;
+}
+
+.gallery-modal img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-modal p {
+    color: #fff;
+    font-family: 'Lora', serif;
+    margin-top: 1rem;
+    text-align: center;
+    max-width: 90%;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: var(--primary);
+    outline: none;
+}
 
 
 /* Mobile Menu Styles */
