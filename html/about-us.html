@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Napier Chess Club - About Us</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/chess_club/css/stylesheet.css">
-    <link rel="icon" type="image/x-icon" href="/chess_club/images/chess-logo.png">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <link rel="icon" type="image/x-icon" href="/images/chess-logo.png">
     <script src="https://kit.fontawesome.com/b89a958fe1.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link
@@ -20,7 +20,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="/chess_club/images/chess-logo.png" alt="Chess Club Logo" role="img">
+            <img src="/images/chess-logo.png" alt="Chess Club Logo" role="img">
         </div>
 
         <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav">
@@ -31,7 +31,7 @@
 
         <nav id="nav" role="navigation" aria-label="Main Navigation">
             <ul class="nav-links">
-                <li><a href="/chess_club/html/index.html"><span>Home</span></a></li>
+                <li><a href="/html/index.html"><span>Home</span></a></li>
             </ul>
         </nav>
 
@@ -47,7 +47,7 @@
         <section class="intro-section">
             <div class="intro-wrapper">
                 <div class="intro-image">
-                    <img src="/chess_club/images/chess-story.jpg" alt="Chess players at Napier" />
+                    <img src="/images/chess-story.jpg" alt="Chess players at Napier" />
                 </div>
                 <div class="intro-content">
                     <h2><i class="fas fa-chess-board chess-icon"></i> Our Story</h2>
@@ -111,7 +111,7 @@
             <div class="team-grid">
                 <div class="team-member">
                     <div class="image-wrapper">
-                        <img src="/chess_club/images/president-headshot.jpg" alt="President - John Allison">
+                        <img src="/images/president-headshot.jpg" alt="President - John Allison">
 
                         <p class="member-quote">"Leading by example and always up for a challenge!"</p>
 
@@ -121,7 +121,7 @@
                 </div>
                 <div class="team-member">
                     <div class="image-wrapper">
-                        <img src="/chess_club/images/secretary-headshot.jpg" alt="Secretary - Ewan Blake">
+                        <img src="/images/secretary-headshot.jpg" alt="Secretary - Ewan Blake">
 
                         <p class="member-quote">"The mind is like a chessboard — plan your moves wisely."</p>
 
@@ -131,7 +131,7 @@
                 </div>
                 <div class="team-member">
                     <div class="image-wrapper">
-                        <img src="/chess_club/images/treasurer-headshot.jpg" alt="Treasurer - Gregor Borthwick">
+                        <img src="/images/treasurer-headshot.jpg" alt="Treasurer - Gregor Borthwick">
 
                         <p class="member-quote">"Strategy isn't just for the board — it's for budgeting too."</p>
 
@@ -141,7 +141,7 @@
                 </div>
                 <div class="team-member">
                     <div class="image-wrapper">
-                        <img src="/chess_club/images/health-&-wellbeing-headshot.jpg" alt="Health & Wellbeing - Rachael Hepburn">
+                        <img src="/images/health-&-wellbeing-headshot.jpg" alt="Health & Wellbeing - Rachael Hepburn">
 
                         <p class="member-quote">"Balance is key — on and off the board."</p>
 
@@ -149,6 +149,36 @@
                     <h3>Rachael Hepburn</h3>
                     <p class="role">Health & Wellbeing Officer</p>
                 </div>
+            </div>
+        </section>
+
+        <section class="gallery-section" aria-labelledby="gallery-heading">
+            <h2 id="gallery-heading"><i class="fas fa-camera-retro chess-icon"></i> Club Highlights</h2>
+            <p class="gallery-description">
+                A glimpse into the moments that define Napier Chess Club — from intense tournaments to relaxed socials.
+            </p>
+            <div class="gallery-grid">
+                <figure class="gallery-item">
+                    <img src="/images/chess-tournament.jpg" alt="Players concentrating during a tournament match"
+                        data-full="/images/chess-tournament.jpg">
+                    <figcaption>Napier vs Stirling Chess Tournament</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="/images/group-chess.jpg"
+                        alt="Chess Club members spectating a tense game of hand and brain chess"
+                        data-full="/images/group-chess.jpg">
+                    <figcaption>Hand and Brain Chess</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="/images/jazz-bar.jpg" alt="Chess Club members enjoying a night at the Jazz Bar"
+                        data-full="/images/jazz-bar.jpg">
+                    <figcaption>Night-Out at the Jazz Bar</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="/images/night-out.jpg" alt="Chess Club members enjoying a night out"
+                        data-full="/images/night-out.jpg">
+                    <figcaption>Chess Club Night-Out</figcaption>
+                </figure>
             </div>
         </section>
 
@@ -175,7 +205,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-brand">
-                <img src="/chess_club/images/ensa-logo.jpg" alt="Edinburgh Napier Students' Association Logo" role="img"
+                <img src="/images/ensa-logo.jpg" alt="Edinburgh Napier Students' Association Logo" role="img"
                     class="ensa-logo" />
                 <p>&copy; 2023 Napier Chess Club<br>Part of Napier University Student Activities</p>
             </div>
@@ -196,7 +226,13 @@
     <div id="scroll" class="back-to-top" role="button" tabindex="0" aria-label="Back to top of page">
         <div class="triangle"></div>
     </div>
-    <script src="/chess_club/js/scripts.js"></script>
+    <script src="/js/about-scripts.js"></script>
+    <div id="gallery-modal" class="gallery-modal" aria-hidden="true" role="dialog" aria-modal="true"
+        aria-labelledby="gallery-modal-label">
+        <button class="modal-close" aria-label="Close image viewer">&times;</button>
+        <img src="" alt="" id="gallery-modal-img" />
+        <p id="gallery-modal-caption"></p>
+    </div>
 
 </body>
 
