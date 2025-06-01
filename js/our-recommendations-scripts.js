@@ -82,13 +82,3 @@ document.getElementById('scroll').addEventListener('keydown', (e) => {
         });
     }
 });
-
-document.querySelectorAll('.nav-links .dropdown > a').forEach(link => {
-    link.addEventListener('click', e => {
-        const parent = link.parentElement;
-        const expanded = link.getAttribute('aria-expanded') === 'true';
-        link.setAttribute('aria-expanded', !expanded);
-        parent.classList.toggle('open');
-        e.preventDefault(); // prevent default link behavior
-    });
-});
