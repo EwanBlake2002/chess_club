@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Napier Chess Club - Our Recommendations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <link rel="icon" type="image/x-icon" href="/images/chess-logo.png">
+    <script src="https://kit.fontawesome.com/b89a958fe1.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Impact&family=Lora:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="/images/chess-logo.png" alt="Chess Club Logo" role="img">
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <nav id="nav" role="navigation" aria-label="Main Navigation">
+            <ul class="nav-links">
+                <li><a href="/html/index.html"><span>Home</span></a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-overlay"></div>
+    </header>
+
+    <main id="recommendations" class="recommendations-page">
+        <section class="recommendations-hero">
+            <h1><i class="fas fa-book chess-icon" aria-hidden="true"></i> Our Book Recommendations</h1>
+            <p class="subtitle">Perfect guides for beginners wanting to learn the art and science of chess.</p>
+        </section>
+
+        <section class="book-list">
+            <!-- Book 1 -->
+            <article class="book-card">
+                <img src="/images/book-cover-1.jpeg" alt="Cover of 'Modern Chess Openings' by Nick de Firmian">
+                <div class="book-content">
+                    <h2>Modern Chess Openings</h2>
+                    <p class="book-author">by Nick de Firmian</p>
+                    <p class="book-description">
+                        Modern Chess Openings is the leading reference for serious players, offering thoroughly updated
+                        opening theory and insights from recent matches. Ideal for both intermediate players advancing
+                        their game and Grandmasters staying current with the latest innovations, this classic guide
+                        remains an essential resource
+                    </p>
+                    <a href="/pdfs/modern-chess-openings.pdf" class="cta-button" download
+                        aria-label="Download Chess Fundamentals PDF">Download Book</a>
+                </div>
+            </article>
+
+            <!-- Book 2 -->
+            <article class="book-card">
+                <img src="/images/book-cover-2.jpg"
+                    alt="Cover of Improve Your Chess: Teach Yourself' by William Hartson">
+                <div class="book-content">
+                    <h2>Improve Your Chess: Teach Yourself</h2>
+                    <p class="book-author">by William Hartson</p>
+                    <p class="book-description">
+                        Improve Your Chess by William Hartston offers 75 structured lessons with illustrated examples
+                        and
+                        grandmaster insights to enhance your strategy and piece coordination. Featuring quick tips,
+                        self-tests, and online extras, this guide helps players of all levels refine their skills
+                        through practical exercises and key principles
+                    </p>
+                    <a href="/pdfs/improve-your-chess.pdf" class="cta-button" download
+                        aria-label="Download Bobby Fischer Teaches Chess PDF">Download Book</a>
+                </div>
+            </article>
+
+            <!-- Book 3 -->
+            <article class="book-card">
+                <img src="/images/book-cover-3.jpeg" alt="Cover of '100 Endgames You Must Know' by Jesus de la Villa">
+                <div class="book-content">
+                    <h2>100 Endgames You Must Know</h2>
+                    <p class="book-author">by Jesus de la Villa</p>
+                    <p class="book-description">
+                        100 Endgames You Must Know by Jesus de la Villa simplifies endgame study by focusing on
+                        the most practical, frequently occurring positions that are easy to learn and apply. With clear
+                        explanations, helpful diagrams, and practical tests, this updated edition helps players of all
+                        levels sharpen their endgame technique efficiently.
+                    </p>
+                    <a href="/pdfs/100-endgames.pdf" class="cta-button" download
+                        aria-label="Download Winning Chess Strategies PDF">Download Book</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="/images/ensa-logo.jpg" alt="Edinburgh Napier Students' Association Logo" role="img"
+                    class="ensa-logo" />
+                <p>&copy; 2023 Napier Chess Club<br>Part of Napier University Student Activities</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="https://www.napierstudents.com/sports_socs/policybank/" target="_blank"
+                    rel="noopener noreferrer">
+                    View ENSA Policy Bank
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Back to Top Button -->
+    <div id="scroll" class="back-to-top" role="button" tabindex="0" aria-label="Back to top of page">
+        <div class="triangle"></div>
+    </div>
+    <script src="/js/our-recommendations-scripts.js"></script>
+
+</body>
+
+</html>
