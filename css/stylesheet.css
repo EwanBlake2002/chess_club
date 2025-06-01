@@ -732,7 +732,7 @@ footer {
 /* Hero Section */
 .hero-about {
     background: linear-gradient(rgba(250, 0, 53, 0.6), rgba(250, 0, 53, 0.6)),
-        url('/chess_club/images/about-banner.jpg') center/cover no-repeat;
+        url('/images/about-banner.jpg') center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 100px 20px;
@@ -1445,6 +1445,134 @@ footer {
     outline: none;
 }
 
+/* Dropdown Styles */
+.nav-links .dropdown {
+    position: relative;
+}
+
+.nav-links .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--background);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow);
+    border-radius: 6px;
+    min-width: 160px;
+    z-index: 999;
+    padding: 0.5rem 0;
+}
+
+.nav-links .dropdown-menu li {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links .dropdown-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.nav-links .dropdown-menu a:hover {
+    background: #f9f9f9;
+    color: var(--primary);
+}
+
+/* Show dropdown on hover for desktop */
+.nav-links .dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.recommendations-page {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.recommendations-hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.recommendations-hero h1 {
+    font-family: 'Impact', sans-serif;
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+.recommendations-hero .subtitle {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    color: #444;
+    margin-top: 1rem;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.book-card {
+    background: var(--background);
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+.book-card img {
+    width: 100%;
+    height: 320px;
+    /* or adjust to 300px / 350px if needed */
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+
+.book-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.book-content h2 {
+    font-family: 'Impact', sans-serif;
+    font-size: 1.25rem;
+    color: var(--primary);
+    margin: 0;
+}
+
+.book-author {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: #666;
+}
+
+.book-description {
+    font-size: 0.95rem;
+    color: #333;
+    flex-grow: 1;
+}
+
+
+
+
 
 /* Mobile Menu Styles */
 @media (max-width: 992px) {
@@ -1507,6 +1635,27 @@ footer {
 
     .hamburger.active .hamburger-line:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-links .dropdown {
+        width: 100%;
+    }
+
+    .nav-links .dropdown-menu {
+        position: static;
+        display: none;
+        width: 100%;
+        border: none;
+        box-shadow: none;
+        background: none;
+    }
+
+    .nav-links .dropdown.open .dropdown-menu {
+        display: block;
+    }
+
+    .nav-links .dropdown-menu a {
+        padding-left: 1.5rem;
     }
 }
 
