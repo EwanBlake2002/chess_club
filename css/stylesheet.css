@@ -732,7 +732,7 @@ footer {
 /* Hero Section */
 .hero-about {
     background: linear-gradient(rgba(250, 0, 53, 0.6), rgba(250, 0, 53, 0.6)),
-        url('/chess_club/images/about-banner.jpg') center/cover no-repeat;
+        url('/images/about-banner.jpg') center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 100px 20px;
@@ -741,6 +741,7 @@ footer {
 .hero-about h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    color: #FEFEFE;
 }
 
 .hero-about p {
