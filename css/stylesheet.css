@@ -782,7 +782,7 @@ footer {
 
 .testimonial-card figcaption {
     font-weight: bold;
-    color: #8F001F;
+    color: var(--primary);
     font-family: 'Lora', serif;
 }
 
@@ -838,7 +838,7 @@ footer {
 /* Hero Section */
 .hero-about {
     background: linear-gradient(rgba(250, 0, 53, 0.6), rgba(250, 0, 53, 0.6)),
-        url('/chess_club/images/about-banner.jpg') center/cover no-repeat;
+        url('/images/about-banner.jpg') center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 100px 20px;
@@ -2020,4 +2020,57 @@ footer {
         background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'><rect width='20' height='20' x='0' y='0' fill='%23FEFEFE'/><rect width='20' height='20' x='40' y='0' fill='%23FEFEFE'/><rect width='20' height='20' x='80' y='0' fill='%23FEFEFE'/><rect width='20' height='20' x='120' y='0' fill='%23FEFEFE'/><rect width='20' height='20' x='20' y='20' fill='%23FEFEFE'/><rect width='20' height='20' x='60' y='20' fill='%23FEFEFE'/><rect width='20' height='20' x='100' y='20' fill='%23FEFEFE'/><rect width='20' height='20' x='140' y='20' fill='%23FEFEFE'/><rect width='20' height='20' x='0' y='40' fill='%23FEFEFE'/><rect width='20' height='20' x='40' y='40' fill='%23FEFEFE'/><rect width='20' height='20' x='80' y='40' fill='%23FEFEFE'/><rect width='20' height='20' x='120' y='40' fill='%23FEFEFE'/><rect width='20' height='20' x='20' y='60' fill='%23FEFEFE'/><rect width='20' height='20' x='60' y='60' fill='%23FEFEFE'/><rect width='20' height='20' x='100' y='60' fill='%23FEFEFE'/><rect width='20' height='20' x='140' y='60' fill='%23FEFEFE'/><rect width='20' height='20' x='0' y='80' fill='%23FEFEFE'/><rect width='20' height='20' x='40' y='80' fill='%23FEFEFE'/><rect width='20' height='20' x='80' y='80' fill='%23FEFEFE'/><rect width='20' height='20' x='120' y='80' fill='%23FEFEFE'/><rect width='20' height='20' x='20' y='100' fill='%23FEFEFE'/><rect width='20' height='20' x='60' y='100' fill='%23FEFEFE'/><rect width='20' height='20' x='100' y='100' fill='%23FEFEFE'/><rect width='20' height='20' x='140' y='100' fill='%23FEFEFE'/><rect width='20' height='20' x='0' y='120' fill='%23FEFEFE'/><rect width='20' height='20' x='40' y='120' fill='%23FEFEFE'/><rect width='20' height='20' x='80' y='120' fill='%23FEFEFE'/><rect width='20' height='20' x='120' y='120' fill='%23FEFEFE'/><rect width='20' height='20' x='20' y='140' fill='%23FEFEFE'/><rect width='20' height='20' x='60' y='140' fill='%23FEFEFE'/><rect width='20' height='20' x='100' y='140' fill='%23FEFEFE'/><rect width='20' height='20' x='140' y='140' fill='%23FEFEFE'/><rect width='20' height='20' x='20' y='0' fill='%23222'/><rect width='20' height='20' x='60' y='0' fill='%23222'/><rect width='20' height='20' x='100' y='0' fill='%23222'/><rect width='20' height='20' x='140' y='0' fill='%23222'/><rect width='20' height='20' x='0' y='20' fill='%23222'/><rect width='20' height='20' x='40' y='20' fill='%23222'/><rect width='20' height='20' x='80' y='20' fill='%23222'/><rect width='20' height='20' x='120' y='20' fill='%23222'/><rect width='20' height='20' x='20' y='40' fill='%23222'/><rect width='20' height='20' x='60' y='40' fill='%23222'/><rect width='20' height='20' x='100' y='40' fill='%23222'/><rect width='20' height='20' x='140' y='40' fill='%23222'/><rect width='20' height='20' x='0' y='60' fill='%23222'/><rect width='20' height='20' x='40' y='60' fill='%23222'/><rect width='20' height='20' x='80' y='60' fill='%23222'/><rect width='20' height='20' x='120' y='60' fill='%23222'/><rect width='20' height='20' x='20' y='80' fill='%23222'/><rect width='20' height='20' x='60' y='80' fill='%23222'/><rect width='20' height='20' x='100' y='80' fill='%23222'/><rect width='20' height='20' x='140' y='80' fill='%23222'/><rect width='20' height='20' x='0' y='100' fill='%23222'/><rect width='20' height='20' x='40' y='100' fill='%23222'/><rect width='20' height='20' x='80' y='100' fill='%23222'/><rect width='20' height='20' x='120' y='100' fill='%23222'/><rect width='20' height='20' x='20' y='120' fill='%23222'/><rect width='20' height='20' x='60' y='120' fill='%23222'/><rect width='20' height='20' x='100' y='120' fill='%23222'/><rect width='20' height='20' x='140' y='120' fill='%23222'/><rect width='20' height='20' x='0' y='140' fill='%23222'/><rect width='20' height='20' x='40' y='140' fill='%23222'/><rect width='20' height='20' x='80' y='140' fill='%23222'/><rect width='20' height='20' x='120' y='140' fill='%23222'/></svg>") center/contain no-repeat;
         max-width: 160px;
     }
+
+    .testimonial-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+    .testimonial-card {
+        min-width: 85%;
+        max-width: 85%;
+        padding: 1rem;
+        font-size: 0.9rem;
+        scroll-snap-align: start;
+        line-height: 1.4;
+    }
+
+    .testimonial-card blockquote {
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .testimonial-card figcaption {
+        font-size: 0.85rem;
+    }
+
+    .section-title-testimonials {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .quote-bg {
+        font-size: 60px;
+    }
+
+    /* Optional: hide floating quote icons for small devices */
+    .quote-bg-1,
+    .quote-bg-2 {
+        display: none;
+    }
+
+    .testimonial-grid::after {
+        content: '← swipe →';
+        font-size: 0.8rem;
+        color: #888;
+        text-align: center;
+        width: 100%;
+        display: block;
+        margin-top: 0.5rem;
+    }
+
 }
