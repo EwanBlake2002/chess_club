@@ -729,12 +729,116 @@ footer {
     text-decoration: underline;
 }
 
+/* Testimonials Section */
+.testimonials {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    position: relative;
+    text-align: center;
+}
+
+.section-title-testimonials {
+    font-family: 'Impact', sans-serif;
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 2.5rem;
+    display: inline-block;
+    position: relative;
+}
+
+.testimonial-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background-color: var(--background);
+    border-left: 5px solid var(--primary);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    max-width: 300px;
+    flex: 1 1 300px;
+    transition: transform 0.3s ease;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-card blockquote {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card figcaption {
+    font-weight: bold;
+    color: var(--primary);
+    font-family: 'Lora', serif;
+}
+
+/* Decorative background quote icons */
+.quote-bg {
+    position: absolute;
+    color: var(--primary);
+    font-size: 100px;
+    opacity: 0.05;
+    z-index: 0;
+    animation: float-quote 6s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+.quote-bg-1 {
+    top: 10%;
+    left: 5%;
+}
+
+.quote-bg-2 {
+    bottom: 10%;
+    right: 5%;
+}
+
+@keyframes float-quote {
+    from {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(-10px) rotate(5deg);
+    }
+}
+
+/* Fade in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
 /* ABOUT US PAGE
 
 /* Hero Section */
 .hero-about {
     background: linear-gradient(rgba(250, 0, 53, 0.6), rgba(250, 0, 53, 0.6)),
-        url('/chess_club/images/about-banner.jpg') center/cover no-repeat;
+        url('/images/about-banner.jpg') center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 100px 20px;
@@ -1780,6 +1884,11 @@ footer {
         color: var(--primary);
     }
 
+    .testimonial-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
 
 }
 
@@ -1810,6 +1919,8 @@ footer {
     .social-links {
         flex-wrap: wrap;
     }
+
+
 
 
 
