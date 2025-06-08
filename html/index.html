@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Napier Chess Club - Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/chess_club/css/stylesheet.css">
-    <link rel="icon" type="image/x-icon" href="/chess_club/images/chess-logo.png">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <link rel="icon" type="image/x-icon" href="/images/chess-logo.png">
     <script src="https://kit.fontawesome.com/b89a958fe1.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link
@@ -22,7 +22,7 @@
     <!-- Replace the existing header in both files with this: -->
     <header>
         <div class="logo">
-            <img src="/chess_club/images/chess-logo.png" alt="Chess Club Logo" role="img">
+            <img src="/images/chess-logo.png" alt="Chess Club Logo" role="img">
         </div>
 
         <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav">
@@ -44,8 +44,8 @@
                     <a href="#" aria-haspopup="true" aria-expanded="false"><span>More <i
                                 class="fas fa-caret-down"></i></span></a>
                     <ul class="dropdown-menu" aria-label="More submenu">
-                        <li><a href="/chess_club/html/our-recommendations.html"><span>Our Recommendations</span></a></li>
-                        
+                        <li><a href="/html/our-recommendations.html"><span>Our Recommendations</span></a></li>
+
                     </ul>
                 </li>
 
@@ -58,6 +58,7 @@
 
     <div class="wrapper">
         <section id="hero" class="hero">
+
             <h1>Welcome to Napier Chess Club</h1>
             <p class="subtitle">Where strategy meets community in the heart of the city. Join players of all levels for
                 tournaments, workshops, and casual games.</p>
@@ -66,6 +67,8 @@
         </section>
 
         <section id="about">
+
+
             <h2 class="section-title">
                 <i class="fas fa-chess-board chess-icon"></i> About Our Club
             </h2>
@@ -93,13 +96,15 @@
             </div>
 
             <div class="about-button">
-                <a class="cta-button" role="button" aria-label="About Napier Chess Club" href="/chess_club/html/about-us.html"
+                <a class="cta-button" role="button" aria-label="About Napier Chess Club" href="/html/about-us.html"
                     class="about-btn">Learn More About Us</a>
             </div>
         </section>
 
 
         <section id="meetings">
+
+
             <h2 class="section-title-meetings">
                 <i class="fas fa-calendar-day chess-icon"></i> Weekly Meetings
             </h2>
@@ -133,6 +138,7 @@
 
 
         <section id="tournaments">
+
             <h2 class="section-title-tournaments">
                 <i class="fas fa-trophy chess-icon"></i> Tournaments
             </h2>
@@ -155,6 +161,8 @@
         </section>
 
         <section id="events" class="events-section">
+
+
             <h2 class="section-title-events">
                 <i class="fas fa-calendar-alt chess-icon" aria-hidden="true"></i> Upcoming Events
             </h2>
@@ -182,14 +190,46 @@
             </div>
 
             <div class="events-button">
-                <a href="/chess_club/html/events.html" class="cta-button" role="button" aria-label="View Full Events Calendar">
+                <a href="/html/events.html" class="cta-button" role="button" aria-label="View Full Events Calendar">
                     View Full Calendar
                 </a>
             </div>
         </section>
 
+        <section id="testimonials" class="testimonials">
+            <!-- Decorative animated quote icon -->
+            <i class="fas fa-quote-left quote-bg quote-bg-1" aria-hidden="true"></i>
+            <i class="fas fa-quote-right quote-bg quote-bg-2" aria-hidden="true"></i>
+
+            <h2 class="section-title-testimonials">
+                <i class="fas fa-quote-left chess-icon" aria-hidden="true"></i> What Our Members Say
+            </h2>
+            <div class="testimonial-grid">
+                <figure class="testimonial-card fade-in">
+                    <blockquote>“The Chess Club has completely transformed my university experience. I came for the
+                        games, stayed for the people.”</blockquote>
+                    <figcaption>— Anna M., Computer Science Student</figcaption>
+                </figure>
+                <figure class="testimonial-card fade-in">
+                    <blockquote>“Whether you’re a total beginner or looking to improve your rating, there’s always
+                        someone to guide you.”</blockquote>
+                    <figcaption>— Jamal T., Business Student</figcaption>
+                </figure>
+                <figure class="testimonial-card fade-in">
+                    <blockquote>“I never thought chess could be this social and welcoming. This club feels like home.”
+                    </blockquote>
+                    <figcaption>— Emily R., International Exchange</figcaption>
+                </figure>
+            </div>
+        </section>
+
+
+
+
 
         <section id="join">
+
+
             <h2 class="section-title-join"><i class="fas fa-user-plus chess-icon"></i> Join Us</h2>
             <p class="join-intro">Ready to become a member? Follow these easy steps:</p>
 
@@ -219,6 +259,8 @@
 
 
         <section id="contact">
+
+
             <h2 class="section-title-contact"><i class="fas fa-envelope chess-icon"></i> Contact & Follow Us</h2>
             <p class="contact-intro">Stay connected for updates on meetings, tournaments, and chess content:</p>
 
@@ -242,7 +284,7 @@
     <footer>
         <div class="footer-container">
             <div class="footer-brand">
-                <img src="/chess_club/images/ensa-logo.jpg" alt="Edinburgh Napier Students' Association Logo" role="img"
+                <img src="/images/ensa-logo.jpg" alt="Edinburgh Napier Students' Association Logo" role="img"
                     class="ensa-logo" />
                 <p>&copy; 2023 Napier Chess Club<br>Part of Napier University Student Activities</p>
             </div>
@@ -259,11 +301,14 @@
 
 
 
+
     <!-- Back to Top Button -->
     <div id="scroll" class="back-to-top" role="button" tabindex="0" aria-label="Back to top of page">
         <div class="triangle"></div>
     </div>
-    <script src="/chess_club/js/index-scripts.js"></script>
+    <script src="/js/index-scripts.js"></script>
+    
+
 </body>
 
 </html>
