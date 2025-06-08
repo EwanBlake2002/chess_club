@@ -54,18 +54,6 @@ backToTopBtn.addEventListener('click', function (e) {
     });
 });
 
-const items = document.querySelectorAll('.timeline-item');
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, {
-    threshold: 0.1
-});
-
-items.forEach(item => observer.observe(item));
 
 const navToggle = document.querySelector('.nav-toggle');
 const overlay = document.querySelector('.nav-overlay');
@@ -92,3 +80,18 @@ document.querySelectorAll('.nav-links .dropdown > a').forEach(link => {
         e.preventDefault(); // prevent default link behavior
     });
 });
+
+const faders = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+faders.forEach(fade => observer.observe(fade));
