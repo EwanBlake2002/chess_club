@@ -85,6 +85,7 @@ document.getElementById('scroll').addEventListener('keydown', (e) => {
 
 const modal = document.getElementById('event-modal');
 const title = document.getElementById('modal-title');
+const date = document.getElementById('modal-date');
 const time = document.getElementById('modal-time');
 const modalLocation = document.getElementById('modal-location'); // Changed variable name
 const closeBtn = document.querySelector('.close-button');
@@ -95,6 +96,7 @@ function setupEventListeners(selector) {
         item.addEventListener('click', () => {
             title.textContent = item.dataset.title;
             time.textContent = `Time: ${item.dataset.time}`;
+            date.textContent = `Date: ${item.dataset.date}`;
             modalLocation.textContent = `Location: ${item.dataset.location}`;
             modal.style.display = 'block';
             modal.setAttribute('aria-hidden', 'false');
@@ -104,6 +106,7 @@ function setupEventListeners(selector) {
         item.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
                 title.textContent = item.dataset.title;
+                date.textContent = `Date: ${item.dataset.date}`;
                 time.textContent = `Time: ${item.dataset.time}`;
                 modalLocation.textContent = `Location: ${item.dataset.location}`;
                 modal.style.display = 'block';
