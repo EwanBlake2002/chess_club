@@ -80,7 +80,18 @@
         <div class="calendar-row" role="row">
           <div role="gridcell">28</div>
           <div role="gridcell">29</div>
-          <div role="gridcell">30</div>
+          <div
+            class="event"
+            role="gridcell"
+            tabindex="0"
+            data-title="Third Game Session"
+            data-date="Tuesday 30th September"
+            data-time="6:00 PM - 8:00 PM"
+            data-location="Edinburgh Napier University, Merchiston Campus, Room E13"
+            aria-label="Fourth Game Session on September 30 at 6:00 PM - 8:00 PM in Merchiston Campus"
+          >
+            30
+          </div>
           <div role="gridcell">1</div>
           <div role="gridcell">2</div>
           <div role="gridcell">3</div>
@@ -191,6 +202,20 @@
 
       <!-- Mobile-Friendly Events -->
       <div class="mobile-events">
+        <div
+          class="mobile-event"
+          tabindex="0"
+          data-title="Third Game Session"
+          data-date="Tuesday 30th September"
+          data-time="6:00 PM – 8:00 PM"
+          data-location="Edinburgh Napier University, Merchiston Campus, Room E13"
+        >
+          <span class="event-date">September 30</span>
+          <h3>Fourth Game Session</h3>
+          <p><i class="far fa-clock"></i> 6:00 PM – 8:00 PM</p>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> Merchiston Campus, Room E13
+          </p>
         <div
           class="mobile-event"
           tabindex="0"
@@ -334,4 +359,5 @@
     <script src="/chess_club/js/events-scripts.js"></script>
   </body>
 </html>
+
 
