@@ -901,7 +901,7 @@ footer {
 /* Hero Section */
 .hero-about {
   background: linear-gradient(rgba(250, 0, 53, 0.6), rgba(250, 0, 53, 0.6)),
-    url("/chess_club/images/about-banner.jpg") center/cover no-repeat;
+    url("/images/about-banner.jpg") center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 100px 20px;
@@ -1211,7 +1211,7 @@ footer {
   right: -50px;
   width: 250px;
   height: 250px;
-  background-image: url("/chess_club/images/chess-pattern.svg");
+  background-image: url("/images/chess-pattern.svg");
   background-size: cover;
   opacity: 0.05;
   transform: rotate(15deg);
@@ -1422,6 +1422,54 @@ footer {
   text-align: left;
 }
 
+/* Halloween Event Card */
+.event-card.halloween {
+  background: linear-gradient(135deg, #1a1a1a, #330000); /* dark + deep red */
+  border: 2px solid #ff6f00; /* bright pumpkin border */
+  color: #fff; /* white text for contrast */
+  box-shadow: 0 8px 20px rgba(255, 111, 0, 0.5); /* orange glow */
+  position: relative;
+  overflow: hidden;
+}
+
+.event-card.halloween h3 {
+  color: #ff6f00; /* pumpkin orange title */
+}
+
+/* Halloween Icon */
+.event-card.halloween .event-icon {
+  color: #ff6f00;
+  font-size: 2.5rem;
+  position: relative;
+}
+
+/* Optional: Add subtle floating bats or pumpkins using pseudo-elements */
+.event-card.halloween::before {
+  content: "🎃";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  opacity: 0.7;
+  animation: float 3s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+/* On hover, add a spooky glow effect */
+.event-card.halloween:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(255, 111, 0, 0.7),
+    0 0 10px rgba(255, 255, 255, 0.2) inset;
+}
+
 /* Calendar Grid Layout */
 .calendar {
   display: grid;
@@ -1538,7 +1586,6 @@ footer {
 /* Multi-event modal expands wider */
 .modal-content.multi {
   max-width: 900px; /* allow side-by-side comfortably */
-  
 }
 
 /* Optional animation */
@@ -1789,6 +1836,125 @@ footer {
   color: var(--primary);
   outline: none;
 }
+
+/* Halloween Calendar Cell */
+.calendar .event.halloween {
+  background: linear-gradient(135deg, #1a1a1a, #330000); /* dark + deep red */
+  border: 2px solid #ff6f00; /* pumpkin border */
+  color: #fff;
+  position: relative;
+}
+
+.calendar .event.halloween::after {
+  content: "🎃"; /* pumpkin icon */
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  font-size: 1.2rem;
+}
+
+.calendar .event.halloween:hover {
+  box-shadow: 0 0 0 2px #ff6f00;
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+/* Halloween Mobile Card */
+.mobile-event.halloween {
+  background: linear-gradient(135deg, #1a1a1a, #330000);
+  border: 2px solid #ff6f00;
+  color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.mobile-event.halloween .event-date {
+  color: #ff6f00;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.mobile-event.halloween h3 {
+  color: #ff6f00;
+}
+
+.mobile-event.halloween p {
+  color: #ffd580;
+}
+
+/* Optional spooky icon floating */
+.mobile-event.halloween::after {
+  content: "🕸️";
+  position: absolute;
+  top: 5px;
+  right: 8px;
+  font-size: 1.5rem;
+  opacity: 0.6;
+  animation: float 4s infinite alternate ease-in-out;
+}
+
+/* Halloween Modal Card */
+/* Halloween Full Modal */
+.modal.halloween {
+  background: rgba(26, 26, 26, 0.9); /* dark spooky overlay */
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+}
+
+/* Ghost icon at top-right */
+.modal.halloween::before {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 2.5rem;
+  opacity: 0.8;
+  animation: float 3s infinite alternate ease-in-out;
+}
+
+/* Inner modal card */
+.modal-event.halloween {
+  background: linear-gradient(135deg, #1a1a1a, #330000);
+  border: 2px solid #ff6f00;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(255, 111, 0, 0.5);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px; /* adjust as needed */
+  text-align: left;
+}
+
+.modal-event.halloween h2 {
+  color: #ff6f00; /* pumpkin orange */
+  position: relative;
+}
+
+.modal-event.halloween h2::after {
+  content: "🦇";
+  margin-left: 8px;
+}
+
+.modal-event.halloween p {
+  color: #ffd580; /* lighter orange text */
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
 
 /* Dropdown Styles */
 .nav-links .dropdown {
