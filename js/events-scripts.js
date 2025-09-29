@@ -90,10 +90,14 @@ const modal = document.getElementById("event-modal");
 const modalBody = document.getElementById("modal-body");
 const closeBtn = document.querySelector(".close-button");
 
-// Event listener setup for calendar + mobile
+// Event listener setup for calendar + mobile events
 function setupEventListeners(selector) {
   document.querySelectorAll(selector).forEach((item) => {
     item.addEventListener("click", () => {
+      // Safely check if data-date exists
+      const date = item.dataset.date || "";
+      const isHalloween = date.includes("28th October");
+
       // Multi-event day
       if (item.classList.contains("multi-event")) {
         const events = item.querySelectorAll(".event-item");
@@ -101,12 +105,17 @@ function setupEventListeners(selector) {
 
         events.forEach((ev) => {
           const extraClass = ev.classList.contains("social") ? " social" : "";
+          const evDate = ev.dataset.date || "";
+          const halloweenClass = evDate.includes("28th October")
+            ? " halloween"
+            : "";
+
           content += `
-            <div class="modal-event${extraClass}">
-              <h2>${ev.dataset.title}</h2>
-              <p><strong>Date:</strong> ${ev.dataset.date}</p>
-              <p><strong>Time:</strong> ${ev.dataset.time}</p>
-              <p><strong>Location:</strong> ${ev.dataset.location}</p>
+            <div class="modal-event${extraClass}${halloweenClass}">
+              <h2>${ev.dataset.title || ""}</h2>
+              <p><strong>Date:</strong> ${ev.dataset.date || ""}</p>
+              <p><strong>Time:</strong> ${ev.dataset.time || ""}</p>
+              <p><strong>Location:</strong> ${ev.dataset.location || ""}</p>
             </div>
           `;
         });
@@ -116,11 +125,11 @@ function setupEventListeners(selector) {
       // Single-event day
       else {
         modalBody.innerHTML = `
-          <div class="modal-event">
-            <h2>${item.dataset.title}</h2>
-            <p><strong>Date:</strong> ${item.dataset.date}</p>
-            <p><strong>Time:</strong> ${item.dataset.time}</p>
-            <p><strong>Location:</strong> ${item.dataset.location}</p>
+          <div class="modal-event${isHalloween ? " halloween" : ""}">
+            <h2>${item.dataset.title || ""}</h2>
+            <p><strong>Date:</strong> ${item.dataset.date || ""}</p>
+            <p><strong>Time:</strong> ${item.dataset.time || ""}</p>
+            <p><strong>Location:</strong> ${item.dataset.location || ""}</p>
           </div>
         `;
       }
@@ -129,9 +138,16 @@ function setupEventListeners(selector) {
       modal.style.display = "flex";
       modal.setAttribute("aria-hidden", "false");
       document.body.style.overflow = "hidden";
+
+      // Add Halloween theme if October 28th
+      if (isHalloween) {
+        modal.classList.add("halloween");
+      } else {
+        modal.classList.remove("halloween");
+      }
     });
 
-    // Allow Enter key to trigger
+    // Allow Enter key to trigger click
     item.addEventListener("keypress", (e) => {
       if (e.key === "Enter") {
         item.click();
@@ -140,18 +156,18 @@ function setupEventListeners(selector) {
   });
 }
 
-// Setup for both desktop and mobile
+// Initialize for both desktop calendar and mobile events
 setupEventListeners(".calendar .event, .calendar .multi-event");
 setupEventListeners(".mobile-event");
 
-// Close button
+// Close modal on button click
 closeBtn.addEventListener("click", () => {
   modal.style.display = "none";
   modal.setAttribute("aria-hidden", "true");
   document.body.style.overflow = "auto";
 });
 
-// Click outside to close
+// Close modal when clicking outside content
 window.addEventListener("click", (e) => {
   if (e.target === modal) {
     modal.style.display = "none";
