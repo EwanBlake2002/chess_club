@@ -1245,7 +1245,7 @@ footer {
   right: -50px;
   width: 250px;
   height: 250px;
-  background-image: url("chess_club/images/chess-pattern.svg");
+  background-image: url("/chess_club/images/chess-pattern.svg");
   background-size: cover;
   opacity: 0.05;
   transform: rotate(15deg);
