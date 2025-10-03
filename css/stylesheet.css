@@ -300,15 +300,98 @@ h2 {
 }
 
 /* Links */
-a {
-  color: var(--primary);
-  text-decoration: none;
-  transition: var(--transition);
+
+/* Container fix: allow tooltips to escape */
+.headline-container {
+  width: 100%;
+  white-space: nowrap;
+  background: linear-gradient(
+    135deg,
+    rgba(250, 0, 53, 0.9) 0%,
+    rgba(139, 0, 0, 0.9) 100%
+  );
+  position: relative;
+  overflow: visible; /* 👈 changed from hidden */
+}
+/* Text styling and animation */
+.headline-text {
+  display: inline-block;
+  transform: translateX(100%); /* Start offscreen right */
+  animation: scroll-bounce 5s forwards;
+  font-family: "Impact", serif;
 }
 
-a:hover {
+/* Keyframes for smooth scroll with bounce */
+@keyframes scroll-bounce {
+  0% {
+    transform: translateX(100%); /* Start offscreen right */
+  }
+  60% {
+    transform: translateX(0); /* Centered */
+  }
+  70% {
+    transform: translateX(-5%); /* Slight overshoot left */
+  }
+  80% {
+    transform: translateX(2%); /* Bounce back right */
+  }
+  90% {
+    transform: translateX(-1%); /* Small left adjustment */
+  }
+  100% {
+    transform: translateX(0); /* Final resting position */
+  }
+}
+
+/* Sponsor link tooltip */
+.sponsor-link {
+  position: relative;
+  color: #e67300;
   text-decoration: none;
-  color: #fa0035;
+}
+
+/* Tooltip box */
+.sponsor-tooltip {
+  position: absolute;
+  bottom: 125%; /* Place above the link */
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 220px; /* 👈 prevents stretching too wide */
+  background: #e67300;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 9999;
+  box-sizing: border-box; /* 👈 ensures padding stays inside */
+  word-wrap: break-word; /* 👈 handles long words */
+  white-space: normal; /* 👈 allows wrapping */
+  line-height: 1.4; /* 👈 improves readability */
+}
+/* Tooltip content styling */
+.sponsor-tooltip img {
+  max-width: 100px;
+  margin-bottom: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sponsor-tooltip p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Show tooltip on hover */
+.sponsor-link:hover .sponsor-tooltip {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(-10px); /* Little pop effect */
 }
 
 /* Title and description styling */
@@ -490,126 +573,77 @@ a:hover {
   opacity: 1;
   visibility: visible;
 }
-
 .section-title-tournaments {
-  font-size: 2rem;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: var(--primary);
+  letter-spacing: 1px;
 }
 
 .tournament-highlight {
-  background: linear-gradient(135deg, #fffefc, #f9f9f9);
-  border-left: 5px solid var(--primary);
-  border-radius: 10px;
-  padding: 20px 25px;
-  margin: 0 auto 25px;
-  max-width: 700px;
+  background: linear-gradient(135deg, #fffefc, #f4f4f4);
+  border-left: 6px solid var(--primary);
+  border-radius: 12px;
+  padding: 25px 28px;
+  margin: 0 auto 30px;
+  max-width: 750px;
   box-shadow: var(--shadow);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tournament-highlight:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .tournament-title {
-  font-size: 1.5rem;
   color: var(--primary);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.tournament-highlight p {
+  font-size: 1.05rem;
+  margin: 8px 0;
+  color: var(--text-primary, #333);
 }
 
 .tournament-intro {
-  margin: 20px 0 10px;
+  margin: 25px 0 15px;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: var(--text-primary, #333);
+  text-align: center;
 }
 
 .tournament-list {
   list-style: none;
   padding-left: 0;
+  max-width: 750px;
+  margin: 0 auto;
 }
 
 .tournament-list li {
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.tournament-wip {
-  background: linear-gradient(135deg, #fffefc, #f9f9f9);
-  border-left: 5px solid var(--primary);
-  border-radius: 10px;
-  padding: 2rem;
-  max-width: 700px;
-  margin: 0 auto;
-  box-shadow: var(--shadow);
-  text-align: center;
-  animation: fadeInUp 0.8s ease-in-out;
-}
-
-.wip-icon {
-  font-size: 3rem;
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.wip-heading {
-  font-size: 1.5rem;
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-}
-
-.wip-message {
   font-size: 1.05rem;
-  color: #444;
-  margin-bottom: 1.5rem;
-  font-family: "Open Sans", sans-serif;
-}
-
-.wip-loader {
   display: flex;
-  justify-content: center;
-  gap: 8px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  background: #fafafa;
+  padding: 12px 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
 }
 
-.wip-loader span {
-  width: 10px;
-  height: 10px;
-  background-color: var(--primary);
-  border-radius: 50%;
-  animation: bounce 1s infinite ease-in-out;
-}
-
-.wip-loader span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.wip-loader span:nth-child(3) {
-  animation-delay: 0.4s;
-}
-
-@keyframes bounce {
-  0%,
-  80%,
-  100% {
-    transform: translateY(0);
-    opacity: 0.6;
-  }
-
-  40% {
-    transform: translateY(-10px);
-    opacity: 1;
-  }
+.tournament-list li:hover {
+  transform: translateX(4px);
+  background: #fff;
 }
 
 .detail-icon {
   color: var(--primary);
-  margin-right: 10px;
-  min-width: 20px;
+  margin-right: 12px;
+  min-width: 22px;
+  font-size: 1.1rem;
 }
 
 .section-title-join {
@@ -901,7 +935,7 @@ footer {
 /* Hero Section */
 .hero-about {
   background: linear-gradient(rgba(250, 0, 53, 0.6), rgba(250, 0, 53, 0.6)),
-    url("/chess_club/images/about-banner.jpg") center/cover no-repeat;
+    url("/images/about-banner.jpg") center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 100px 20px;
@@ -1211,7 +1245,7 @@ footer {
   right: -50px;
   width: 250px;
   height: 250px;
-  background-image: url("/chess_club/images/chess-pattern.svg");
+  background-image: url("/images/chess-pattern.svg");
   background-size: cover;
   opacity: 0.05;
   transform: rotate(15deg);
@@ -1954,7 +1988,6 @@ footer {
     transform: translateY(-8px);
   }
 }
-
 
 /* Dropdown Styles */
 .nav-links .dropdown {
