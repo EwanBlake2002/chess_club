@@ -9,8 +9,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="/chess_club/css/stylesheet.css" />
-    <link rel="icon" type="image/x-icon" href="/chess_club/images/chess-logo.png" />
+    <link rel="stylesheet" href="/css/stylesheet.css" />
+    <link rel="icon" type="image/x-icon" href="/images/chess-logo.png" />
     <script
       src="https://kit.fontawesome.com/b89a958fe1.js"
       crossorigin="anonymous"
@@ -26,7 +26,7 @@
     <!-- Replace the existing header in both files with this: -->
     <header>
       <div class="logo">
-        <img src="/chess_club/images/chess-logo.png" alt="Chess Club Logo" role="img" />
+        <img src="/images/chess-logo.png" alt="Chess Club Logo" role="img" />
       </div>
 
       <button
@@ -53,9 +53,9 @@
           <li>
             <a href="#meetings"><span>Weekly Sessions</span></a>
           </li>
-          <!--<li>
+          <li>
             <a href="#tournaments"><span>Tournaments</span></a>
-          </li>-->
+          </li>
           <li>
             <a href="#events"><span>Events</span></a>
           </li>
@@ -71,7 +71,7 @@
             ></a>
             <ul class="dropdown-menu" aria-label="More submenu">
               <li>
-                <a href="/chess_club/html/our-recommendations.html"
+                <a href="/html/our-recommendations.html"
                   ><span>Our Recommendations</span></a
                 >
               </li>
@@ -86,6 +86,23 @@
     <div class="wrapper">
       <section id="hero" class="hero">
         <h1>Welcome to Napier Chess Club</h1>
+
+        <div class="headline-container">
+          <div class="headline-text">
+            The Chess Club is sponsored by
+            <a href="https://www.seamuss.co.uk/" class="sponsor-link">
+              Seamus's
+              <span class="sponsor-tooltip">
+                <img src="/images/seamus_logo.jpg" alt="Seamus's Logo" />
+                <p>
+                  Seamus's is our newest proud sponsor! They offer fun times,
+                  games, and more!
+                </p>
+              </span>
+            </a>
+          </div>
+        </div>
+
         <p class="subtitle">
           Where strategy meets community in the heart of the city. Join players
           of all levels for tournaments, workshops, and casual games.
@@ -142,7 +159,7 @@
             class="cta-button"
             role="button"
             aria-label="About Napier Chess Club"
-            href="/chess_club/html/about-us.html"
+            href="/html/about-us.html"
             class="about-btn"
             >Learn More About Us</a
           >
@@ -193,40 +210,67 @@
         </div>
       </section>
 
-      <!--<section id="tournaments">
+      <section id="tournaments">
         <h2 class="section-title-tournaments">
-          <i class="fas fa-trophy chess-icon"></i> Inter-University Tournament
+          <i class="fas fa-trophy chess-icon"></i> Napier Chess Tournaments
         </h2>
 
+        <!-- Featured Tournament -->
         <div class="tournament-highlight">
-                <h3 class="tournament-title"><i class="fas fa-star chess-icon"></i> Upcoming Club Championship</h3>
-                <p><i class="fas fa-calendar-alt detail-icon"></i> November 15–17, 2023</p>
-                <p><i class="fas fa-medal detail-icon"></i> Prizes for top finishers in each rating category</p>
-                <p><i class="fas fa-chess-board detail-icon"></i> OTB rated games · Time control: <strong>90+30</strong>
-                </p>
-            </div>
-
-            <p class="tournament-intro">We host regular tournaments throughout the year, including:</p>
-            <ul class="tournament-list">
-                <li><i class="fas fa-bolt detail-icon"></i> Monthly rapid and blitz events</li>
-                <li><i class="fas fa-crown detail-icon"></i> Annual club championship</li>
-                <li><i class="fas fa-users detail-icon"></i> Team matches against other universities</li>
-                <li><i class="fas fa-lightbulb detail-icon"></i> Special themed events (simuls, bughouse, etc.)</li>
-            </ul> 
-
-        <div class="tournament-wip">
-          <i class="fas fa-tools wip-icon" aria-hidden="true"></i>
-          <h3 class="wip-heading">Tournaments Are Coming Soon</h3>
-          <p class="wip-message">
-            We're currently working behind the scenes to bring you
-            inter-university challenges, club championships, and more! Stay
-            tuned.
+          <h3 class="tournament-title">
+            <i class="fas fa-star chess-icon"></i> Napier Club Tournament
+          </h3>
+          <p>
+            <i class="fas fa-calendar-alt detail-icon"></i> Tuesday 28th October
           </p>
-          <div class="wip-loader" aria-hidden="true">
-            <span></span><span></span><span></span>
-          </div>
+          <p>
+            <i class="fas fa-candy-cane detail-icon"></i> Spooky sweets +
+            bragging rights are on offer
+          </p>
+          <p>
+            <i class="fas fa-chess-board detail-icon"></i> Seeded by Chess.com
+            ELO · 6 players · 5-minute blitz games (no increments)
+          </p>
         </div>
-      </section>-->
+
+        <!-- Intro -->
+        <p class="tournament-intro">
+          We run a variety of fun and competitive tournaments throughout the
+          year:
+        </p>
+
+        <!-- Tournament Types -->
+        <ul class="tournament-list">
+          <li>
+            <i class="fas fa-bolt detail-icon"></i>
+            <span
+              ><strong>Rapid & Blitz Nights</strong> – monthly fast-paced
+              battles with rating prizes</span
+            >
+          </li>
+          <li>
+            <i class="fas fa-crown detail-icon"></i>
+            <span
+              ><strong>Annual Club Championship</strong> – our flagship event
+              for glory & silverware</span
+            >
+          </li>
+          <li>
+            <i class="fas fa-users detail-icon"></i>
+            <span
+              ><strong>Inter-University Matches</strong> – take on rival
+              universities in team format</span
+            >
+          </li>
+          <li>
+            <i class="fas fa-hat-wizard detail-icon"></i>
+            <span
+              ><strong>Special Events</strong> – simuls, bughouse chaos, and
+              seasonal theme nights</span
+            >
+          </li>
+        </ul>
+      </section>
 
       <section id="events" class="events-section">
         <h2 class="section-title-events">
@@ -242,8 +286,8 @@
         <div class="event-featured">
           <div class="event-card featured">
             <i class="fas fa-chess-knight event-icon" aria-hidden="true"></i>
-            <h3>Third Game Session</h3>
-            <p><strong>Date:</strong> Tuesday 30th September</p>
+            <h3>Game Session</h3>
+            <p><strong>Date:</strong> Tuesday 7th October</p>
             <p><strong>Time:</strong> 6:00 PM – 8:00 PM</p>
             <p>
               <strong>Location:</strong> Edinburgh Napier University, Merchiston
@@ -256,18 +300,7 @@
         <div class="event-secondary-row">
           <div class="event-card">
             <i class="fas fa-chess-knight event-icon" aria-hidden="true"></i>
-            <h3>Fourth Game Session</h3>
-            <p><strong>Date:</strong> Tuesday 7th October</p>
-            <p><strong>Time:</strong> 6:00 PM – 8:00 PM</p>
-            <p>
-              <strong>Location:</strong> Edinburgh Napier University, Merchiston
-              Campus, Room E13
-            </p>
-          </div>
-
-          <div class="event-card">
-            <i class="fas fa-chess-knight event-icon" aria-hidden="true"></i>
-            <h3>Fifth Game Session</h3>
+            <h3>Game Session</h3>
             <p><strong>Date:</strong> Tuesday 14th October</p>
             <p><strong>Time:</strong> 6:00 PM – 8:00 PM</p>
             <p>
@@ -286,7 +319,7 @@
 
           <div class="event-card">
             <i class="fas fa-chess-knight event-icon" aria-hidden="true"></i>
-            <h3>Sixth Game Session</h3>
+            <h3>Game Session</h3>
             <p><strong>Date:</strong> Tuesday 21st October</p>
             <p><strong>Time:</strong> 6:00 PM – 8:00 PM</p>
             <p>
@@ -297,7 +330,7 @@
 
           <div class="event-card halloween">
             <i class="fas fa-chess-knight event-icon" aria-hidden="true"></i>
-            <h3>Seventh Game Session</h3>
+            <h3>Napier Club Tournament (Spooky Edition!)</h3>
             <p><strong>Date:</strong> Tuesday 28th October</p>
             <p><strong>Time:</strong> 6:00 PM – 8:00 PM</p>
             <p>
@@ -310,7 +343,7 @@
         <!-- Button -->
         <div class="events-button">
           <a
-            href="/chess_club/html/events.html"
+            href="/html/events.html"
             class="cta-button"
             role="button"
             aria-label="View Full Events Calendar"
@@ -444,7 +477,7 @@
       <div class="footer-container">
         <div class="footer-brand">
           <img
-            src="/chess_club/images/ensa-logo.jpg"
+            src="/images/ensa-logo.jpg"
             alt="Edinburgh Napier Students' Association Logo"
             role="img"
             class="ensa-logo"
@@ -477,7 +510,6 @@
     >
       <div class="triangle"></div>
     </div>
-    <script src="/chess_club/js/index-scripts.js"></script>
+    <script src="/js/index-scripts.js"></script>
   </body>
 </html>
-
